@@ -1,4 +1,4 @@
-import { ModalContext } from "hooks/useModal";
+import { ModalContext } from "src/hooks/useModal";
 import React, { useRef, useContext } from "react";
 import { useSpring, animated } from "react-spring";
 import { Background, ModalWrapper, ModalContent, CloseModalButton } from "./Modal.style";

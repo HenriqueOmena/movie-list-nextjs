@@ -1,5 +1,5 @@
-import { device } from "components/breakpoints";
 import { MdClose } from "react-icons/md";
+import { device } from "src/global/styles/breakpoints";
 import styled from "styled-components";
 
 export const Background = styled.div`
