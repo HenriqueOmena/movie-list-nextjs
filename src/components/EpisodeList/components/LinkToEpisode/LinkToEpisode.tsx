@@ -1,8 +1,8 @@
-import { LinkToEpisodeProps } from "components/EpisodeList/EpisodeList.interface";
-import { formatUrl } from "components/EpisodeList/EpisodeList.utils";
-import { ModalContext } from "hooks/useModal";
+import { LinkToEpisodeProps } from "src/components/EpisodeList/EpisodeList.interface";
+import { formatUrl } from "src/components/EpisodeList/EpisodeList.utils";
+import { ModalContext } from "src/hooks/useModal";
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 /**
  * All parameter of a Episode to generate a correctly URL
@@ -22,9 +22,11 @@ const LinkToEpisode: React.FC<LinkToEpisodeProps> = ({ number, name, season, id,
   });
 
   return (
-    <Link to={urlWithParams(season, number, name, id)} key={id} onClick={() => handleModal()}>
-      {children}
-    </Link>
+    <div onClick={() => handleModal()}>
+      <Link href={urlWithParams(season, number, name, id)} key={id}>
+        {children}
+      </Link>
+    </div>
   );
 };
 

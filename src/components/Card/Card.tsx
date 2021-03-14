@@ -1,10 +1,10 @@
-import { apiTvMaze } from "api/config";
+import { apiTvMaze } from "src/api/config";
 import React, { useState, useEffect, useContext } from "react";
 import { FlipCard } from "./Card.style";
 import ReactHtmlParser from "react-html-parser";
-import { EpisodeList } from "components/EpisodeList";
-import { ModalContext } from "hooks/useModal";
-import { RequestShowTv } from "store/shows.interface";
+import { EpisodeList } from "src/components/EpisodeList";
+import { ModalContext } from "src/hooks/useModal";
+import { RequestShowTv } from "src/store/shows.interface";
 
 /**
  *  Get the shows information and mount a Card with details about it
